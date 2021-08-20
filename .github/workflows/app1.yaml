@@ -1,6 +1,7 @@
 name: app1
 
 env:
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
   DOCKERHUB_NAMESPACE: jkosik
   DOCKERHUB_REPO: app1
 
