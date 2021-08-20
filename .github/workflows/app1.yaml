@@ -21,7 +21,9 @@ jobs:
         uses: actions/checkout@master
 
       - name: Generate Image tag
-        run: echo "TAG=dev-`date +%s`" >> $GITHUB_ENV
+        run: |
+          echo "TAG=dev-`date +%s`" >> $GITHUB_ENV
+          echo $TAG
 
       - name: Kaniko build
         uses: aevea/action-kaniko@master
@@ -30,4 +32,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
           build_file: Dockerfile
-          tag: ${{ TAG }}
+          tag: $TAG
