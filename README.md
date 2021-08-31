@@ -1,4 +1,4 @@
-# app1-code
+# app1-code..
 
 This projects represents `app1` code producing Docker images tagged by the actual environment and timestamp in [Docker Hub Repository](https://hub.docker.com/repository/docker/jkosik/app1).
 For demo we will imitate dev environment, producing images as, e.g. `app1:dev-1629484471`.
