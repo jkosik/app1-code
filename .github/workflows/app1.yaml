@@ -25,19 +25,19 @@ jobs:
       - name: Generate Image tag for DEV
         if: github.ref == 'refs/heads/dev'
         run: |
-          echo "TAG=$dev-`date +%s`" >> $GITHUB_ENV
+          echo "TAG=dev-`date +%s`" >> $GITHUB_ENV
           echo "TAG: $TAG"
 
       - name: Generate Image tag for STAGE
         if: github.ref == 'refs/heads/stage'
         run: |
-          echo "TAG=$dev-`date +%s`" >> $GITHUB_ENV
+          echo "TAG=stage-`date +%s`" >> $GITHUB_ENV
           echo "TAG: $TAG"
 
       - name: Generate Image tag for MAIN
         if: github.ref == 'refs/heads/main'
         run: |
-          echo "TAG=$dev-`date +%s`" >> $GITHUB_ENV
+          echo "TAG=`date +%s`" >> $GITHUB_ENV
           echo "TAG: $TAG"
 
       - name: Kaniko build
