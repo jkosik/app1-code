@@ -26,19 +26,16 @@ jobs:
         if: github.ref == 'refs/heads/dev'
         run: |
           echo "TAG=dev-`date +%s`" >> $GITHUB_ENV
-          echo "Building Image Tag ${{ env.TAG }}"
 
       - name: Generate Image tag for STAGE
         if: github.ref == 'refs/heads/stage'
         run: |
           echo "TAG=stage-`date +%s`" >> $GITHUB_ENV
-          echo "Building Image Tag ${{ env.TAG }}"
 
       - name: Generate Image tag for MAIN
         if: github.ref == 'refs/heads/main'
         run: |
           echo "TAG=`date +%s`" >> $GITHUB_ENV
-          echo "Building Image Tag ${{ env.TAG }}"
 
       - name: Kaniko build
         uses: aevea/action-kaniko@master
