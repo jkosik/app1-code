@@ -1,4 +1,4 @@
-### Docker image tagged with timestamp and source branch
+## Docker image tagged with timestamp and source branch
 Used for CICD and ArgoCD Image Updater testing.
 
 Docker images are tagged with the source branch and timestamp and pushed to [Docker Hub Repository](https://hub.docker.com/repository/docker/jkosik/app1).
