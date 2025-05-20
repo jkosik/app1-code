@@ -9,3 +9,4 @@ In production setup, it will follow this pattern:
 - STAGE branch => `app1:stage-1629484472`
 - MAIN (PROD) branch => `app1:1629484473`
 
+test
